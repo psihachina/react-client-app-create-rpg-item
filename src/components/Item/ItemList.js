@@ -92,7 +92,7 @@ export class ItemList extends Component {
   }
 
   async itemData() {
-    const response = await fetch('http://localhost:8081/items');
+    const response = await fetch('https://rpg-craft-item.azurewebsites.net/api/v1/item');
     const data = await response.json();
     this.setState({ items: data, loading: false });
   }
